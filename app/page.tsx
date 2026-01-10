@@ -1,5 +1,9 @@
-import Publicidade from "@/components/Publicidade";
+import { Publicidade } from "@/components/Publicidade/Publicidade";
 
 export default function Home() {
-  return <Publicidade />;
+  return (
+    <div>
+      <Publicidade />
+    </div>
+  );
 }

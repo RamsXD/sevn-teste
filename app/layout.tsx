@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
+import { Header } from "@/components/Header";
 import { IBM_Plex_Sans } from "next/font/google";
 
 const IBM = IBM_Plex_Sans({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${IBM.className} antialiased`}>
         <Header />
         <main className="px-12.5 py-8">{children}</main>
