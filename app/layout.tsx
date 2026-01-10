@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import { IBM_Plex_Sans } from "next/font/google";
+
+const IBM = IBM_Plex_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${IBM.className} antialiased`}>
         <Header />
-        <main>{children}</main>
+        <main className="px-12.5 py-8">{children}</main>
       </body>
     </html>
   );
