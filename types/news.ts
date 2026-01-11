@@ -23,3 +23,9 @@ export type ApiResponse<T> = {
   count: number;
   data: T;
 };
+
+export type ArticlePageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
