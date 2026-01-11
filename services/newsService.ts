@@ -18,10 +18,12 @@ export async function getHeadlines(): Promise<NewsHeadlines[]> {
 
 export async function getOthers(): Promise<NewsBase[]> {
   const res = await fetch(`${BASE_URL}/news/others`);
-  return handleResponse<NewsBase[]>(res);
+  const json = await handleResponse<ApiResponse<NewsBase[]>>(res);
+  return json.data;
 }
 
 export async function getArticleById(id: number): Promise<NewsArticle | null> {
   const res = await fetch(`${BASE_URL}/news/article/${id}`);
-  return handleResponse<NewsArticle | null>(res);
+  const json = await handleResponse<ApiResponse<NewsArticle>>(res);
+  return json.data;
 }

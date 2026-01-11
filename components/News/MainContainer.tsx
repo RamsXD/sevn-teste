@@ -8,8 +8,8 @@ export async function MainContainer() {
   const sideHeadlines = headlines.slice(1, 3);
 
   return (
-    <div className="w-full pt-21 gap-5 grid grid-cols-1 lg:grid-cols-2 ">
-      <div className="flex flex-col gap-4 pb-16">
+    <div className="w-full py-21 gap-5 grid grid-cols-1 lg:grid-cols-2 ">
+      <article className="flex flex-col gap-4 pb-16">
         <span
           style={{ color: MainHeadlines.categoryColor }}
           className="font-bold text-[12px] uppercase"
@@ -19,7 +19,7 @@ export async function MainContainer() {
         <h2 className="font-bold text-2xl sm:text-[44px] md:text-[44px] lg:text-[58px]">
           {MainHeadlines.title}
         </h2>
-      </div>
+      </article>
 
       <div className=" gap-5 grid grid-cols-1 sm:grid-cols-2">
         {sideHeadlines.map((headline) => (
