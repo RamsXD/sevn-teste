@@ -35,9 +35,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </span>
       <Publicity />
       <article className="lg:text-[20px] lg:space-y-6 leading-relaxed">
-        {article.content.split(".").map((sentence, index) => (
-          <p key={index}>{sentence.trim()}</p>
-        ))}
+        <p>{article.content}</p>
       </article>
     </article>
   );
