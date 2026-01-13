@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${IBM.className} antialiased`}>
         <Header />
-        <main className="px-12.5 py-3 ">{children}</main>
+        <main className="px-12.5 pt-3 pb-16 ">{children}</main>
       </body>
     </html>
   );
