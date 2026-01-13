@@ -6,9 +6,13 @@ export default function BackButton() {
   const pathname = usePathname();
   const router = useRouter();
   return (
-    <div className="absolute left-0 h-13.5 w-13.5 bg-black text-white flex items-center justify-center">
+    <div className="absolute left-0 top-0">
       {pathname !== "/" && (
-        <button onClick={() => router.back()}>
+        <button
+          className=" bg-black h-13.5 w-13.5 text-white flex items-center justify-center cursor-pointer"
+          onClick={() => router.back()}
+          aria-label="Botão voltar"
+        >
           <svg
             width="24"
             height="24"
@@ -19,16 +23,16 @@ export default function BackButton() {
             <path
               d="M19 12H5"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M12 19L5 12L12 5"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>

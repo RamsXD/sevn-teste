@@ -19,7 +19,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const hour = time.slice(0, 5);
 
   return (
-    <article className="lg:px-37.5 lg:py-12.25">
+    <article className="lg:px-25 lg:py-9.25">
       <span
         style={{ color: article.categoryColor }}
         className="font-bold text-[12px]  py-3.75"
@@ -29,12 +29,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <h1 className="font-bold text-2xl leading-tight sm:text-[44px] lg:text-[58px]">
         {article.title}
       </h1>
-      <p className="lg:py-7.5 lg:text-[25px]">{article.summary}</p>
+      <p className="py-3.25 lg:py-7.5 lg:text-[25px]">{article.summary}</p>
       <span className="font-bold text-[12px] text-[#00000033]">
         {formattedDate} às {hour}, Por: {article.author}
       </span>
       <Publicity />
-      <article className="lg:text-[20px] lg:space-y-6 leading-relaxed">
+      <article className="lg:text-[20px] leading-relaxed md:leading-10 lg:leading-15">
         <p>{article.content}</p>
       </article>
     </article>
